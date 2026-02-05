@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Shalom Retreat Centre - Coming Soon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            overflow-y: auto;
+            position: relative;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 20px;
+        }
+
+        /* Animated Bubbly Background */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .bubble {
+            position: absolute;
+            bottom: -150px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: rise 15s infinite ease-in;
+            backdrop-filter: blur(5px);
+        }
+
+        .bubble:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            left: 10%;
+            animation-duration: 12s;
+            animation-delay: 0s;
+        }
+
+        .bubble:nth-child(2) {
+            width: 120px;
+            height: 120px;
+            left: 20%;
+            animation-duration: 14s;
+            animation-delay: 2s;
+        }
+
+        .bubble:nth-child(3) {
+            width: 60px;
+            height: 60px;
+            left: 35%;
+            animation-duration: 10s;
+            animation-delay: 4s;
+        }
+
+        .bubble:nth-child(4) {
+            width: 100px;
+            height: 100px;
+            left: 50%;
+            animation-duration: 13s;
+            animation-delay: 0s;
+        }
+
+        .bubble:nth-child(5) {
+            width: 90px;
+            height: 90px;
+            left: 65%;
+            animation-duration: 11s;
+            animation-delay: 3s;
+        }
+
+        .bubble:nth-child(6) {
+            width: 140px;
+            height: 140px;
+            left: 80%;
+            animation-duration: 15s;
+            animation-delay: 1s;
+        }
+
+        .bubble:nth-child(7) {
+            width: 70px;
+            height: 70px;
+            left: 90%;
+            animation-duration: 12s;
+            animation-delay: 5s;
+        }
+
+        .bubble:nth-child(8) {
+            width: 110px;
+            height: 110px;
+            left: 15%;
+            animation-duration: 14s;
+            animation-delay: 6s;
+        }
+
+        .bubble:nth-child(9) {
+            width: 85px;
+            height: 85px;
+            left: 45%;
+            animation-duration: 13s;
+            animation-delay: 2s;
+        }
+
+        .bubble:nth-child(10) {
+            width: 95px;
+            height: 95px;
+            left: 75%;
+            animation-duration: 11s;
+            animation-delay: 4s;
+        }
+
+        @keyframes rise {
+            0% {
+                bottom: -150px;
+                transform: translateX(0) scale(1);
+                opacity: 0.6;
+            }
+            50% {
+                transform: translateX(100px) scale(1.1);
+                opacity: 0.8;
+            }
+            100% {
+                bottom: 110vh;
+                transform: translateX(-50px) scale(0.8);
+                opacity: 0;
+            }
+        }
+
+        /* Content Container */
+        .container {
+            position: relative;
+            z-index: 10;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .logo {
+            width: 250px;
+            max-width: 80%;
+            margin: 0 auto 30px;
+            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+            display: block;
+        }
+
+        .content-box {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px 35px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        p {
+            color: #555;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            color: #333;
+            font-weight: 500;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.1em;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-weight: 600;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .success-message {
+            display: none;
+            background: #4caf50;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-weight: 500;
+        }
+
+        .error-message {
+            display: none;
+            background: #f44336;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-weight: 500;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 15px;
+            }
+
+            .logo {
+                width: 200px;
+                margin-bottom: 25px;
+            }
+
+            .content-box {
+                padding: 30px 25px;
+            }
+
+            h1 {
+                font-size: 1.75em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Bubbly Background -->
+    <div class="background">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <img src="Shalom_logo_transparent.png" alt="Shalom Retreat Centre" class="logo">
+        
+        <div class="content-box">
+            <h1>Coming Soon</h1>
+            <p>The Shalom Retreat Centre website will launch soon. If you would like to hear about all our upcoming events, please fill out your contact details below.</p>
+
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message (Optional)</label>
+                    <textarea id="message" name="message" placeholder="Any specific interests or questions?"></textarea>
+                </div>
+
+                <button type="submit">Stay Updated</button>
+            </form>
+
+            <div class="success-message" id="successMessage">
+                Thank you! We'll keep you updated on our upcoming events.
+            </div>
+
+            <div class="error-message" id="errorMessage">
+                Oops! Something went wrong. Please try again.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('contactForm');
+        const successMessage = document.getElementById('successMessage');
+        const errorMessage = document.getElementById('errorMessage');
+
+        // REPLACE THIS URL WITH YOUR GOOGLE APPS SCRIPT WEB APP URL
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzMTzUntXwILEshQC1yCfrL_0h07oDUvFPJBVGoWK53LrcUM3KP3_3Sqj_CTnMh_ya9/exec';
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+
+            // Check if URL has been updated
+            if (scriptURL === 'YOUR_GOOGLE_SCRIPT_URL_HERE') {
+                errorMessage.innerHTML = 'Please update the Google Apps Script URL in the HTML file. See GOOGLE_SHEETS_SETUP.md for instructions.';
+                errorMessage.style.display = 'block';
+                return;
+            }
+
+            // Show loading state
+            const submitButton = form.querySelector('button');
+            const originalText = submitButton.textContent;
+            submitButton.textContent = 'Sending...';
+            submitButton.disabled = true;
+
+            fetch(scriptURL, { 
+                method: 'POST', 
+                body: new FormData(form),
+                mode: 'no-cors'
+            })
+            .then(response => {
+                console.log('Response received:', response);
+                // With no-cors mode, we can't read the response, but if we get here, it worked
+                successMessage.style.display = 'block';
+                errorMessage.style.display = 'none';
+                form.reset();
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                }, 5000);
+            })
+            .catch(error => {
+                // Show error message with details
+                console.error('Full error:', error);
+                errorMessage.innerHTML = 'Error submitting form. Please check:<br>1. Google Script is deployed as "Anyone" can access<br>2. Script URL is correct<br>3. Check browser console (F12) for details';
+                errorMessage.style.display = 'block';
+                successMessage.style.display = 'none';
+            })
+            .finally(() => {
+                // Reset button state
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+            });
+        });
+    </script>
+</body>
+</html>
