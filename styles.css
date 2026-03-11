@@ -553,6 +553,8 @@ img {
     box-shadow: 0 5px 20px rgba(0,0,0,0.08);
     transition: var(--transition);
     opacity: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .retreat-card:hover {
@@ -586,7 +588,7 @@ img {
     box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
-.retreat-content { padding: 2rem; }
+.retreat-content { padding: 2rem; display: flex; flex-direction: column; flex: 1; }
 
 /* Slightly tighter padding on bookings page for slimmer cards */
 .retreats-section .retreat-content { padding: 1.5rem; }
@@ -623,6 +625,7 @@ img {
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
     text-align: center;
+    margin-top: auto;
 }
 
 /* ===== FORMS ===== */
