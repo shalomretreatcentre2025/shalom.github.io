@@ -24,7 +24,7 @@ const retreatsData = [
         name: "Mother Daughter Retreat",
         tag: "Day Retreat",
         date: "Sun. 12th April 11:30pm-4:15pm",
-        image: "https://i.postimg.cc/L6wGGkyP/mother-daughter-retreat-mini.png?w=800&q=80",
+        image: "https://i.postimg.cc/qvdzcFf7/mother-daughter-retreat-mini.png?w=800&q=80",
         description: "A Day retreat for mothers and daughters with talks, Adoration, tea coffee & packed lunch, and Holy Mass.",
         sheetName: "Mother Daughter"
     }
