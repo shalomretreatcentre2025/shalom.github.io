@@ -1,46 +1,10 @@
-// ===== SHARED RETREATS DATA =====
-// Edit this ONE array to update both the Retreats page and the homepage highlights.
-const retreatsData = [
-    {
-        id: "silent28march",
-        name: "Silent Day Retreat: Holy Week Prep",
-        tag: "Day Retreat",
-        date: "Sat. 28th March 12pm-4pm",
-        image: "https://i.postimg.cc/5yN5fZrY/silent-mini-retreat-mini.png?w=800&q=80",
-        description: "Join us for a mini-silent retreat with talks by Fr. Eamon Roche and Fr. John Mockler. Prepare for Holy Week with silence, prayer, adoration, and Holy Mass",
-        sheetName: "Silent retreat 28th March"
-    },
-    {
-        id: "divinemercyjohn",
-        name: "Divine Mercy Retreat",
-        tag: "Day Mini-Retreat",
-        date: "Sat. 11th April 12pm-3:15pm",
-        image: "https://i.postimg.cc/jjP4c6Nq/divine-mercy-mini.png?w=800&q=80",
-        description: "A mini-retreat on Divine Mercy led by Fr. John Mockler with talks, Adoration, tea coffee & packed lunch, and Holy Mass.",
-        sheetName: "Divine Mercy 11th April"
-    },
-        {
-        id: "motherdaughterday",
-        name: "Mother Daughter Retreat",
-        tag: "Day Retreat",
-        date: "Sun. 12th April 11:30pm-4:15pm",
-        image: "https://i.postimg.cc/qvdzcFf7/mother-daughter-retreat-mini.png?w=800&q=80",
-        description: "A Day retreat for mothers and daughters with talks, Adoration, tea coffee & packed lunch, and Holy Mass.",
-        sheetName: "Mother Daughter"
-    }
-    // To add a retreat: add a comma after the last entry and paste a new block here.
-];
-
-// ===== RETREAT INFO MAP (for retreat-signup.html) =====
-// Auto-generated from retreatsData so you never need to maintain two lists.
-const retreatInfo = retreatsData.reduce((map, r) => {
-    map[r.id] = { name: r.name, sheetName: r.sheetName };
-    return map;
-}, {});
+// ===== RETREATS DATA =====
+// Retreats are now managed via the Admin Panel (/retreat-manager.html)
+// and stored in retreats.json — do not hardcode data here.
 
 // ===== MOBILE MENU TOGGLE =====
 const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
+const navMenu   = document.querySelector('.nav-menu');
 
 if (hamburger && navMenu) {
     hamburger.addEventListener('click', () => {
@@ -59,19 +23,19 @@ if (hamburger && navMenu) {
 const scriptURL = 'https://script.google.com/macros/s/AKfycbz3bWasgGFisq-HXqzneAX9Et6m7rHTARl3SNBAXFLDCyZHYdt98_6RG_jbxx0YCQjzaQ/exec';
 
 function handleFormSubmit(formId, successId, errorId) {
-    const form = document.getElementById(formId);
+    const form           = document.getElementById(formId);
     const successMessage = document.getElementById(successId);
-    const errorMessage = document.getElementById(errorId);
+    const errorMessage   = document.getElementById(errorId);
     if (!form) return;
 
     form.addEventListener('submit', e => {
         e.preventDefault();
-        const submitButton = form.querySelector('button[type="submit"]');
-        const originalText = submitButton.textContent;
+        const submitButton  = form.querySelector('button[type="submit"]');
+        const originalText  = submitButton.textContent;
         submitButton.textContent = 'Sending...';
-        submitButton.disabled = true;
+        submitButton.disabled    = true;
         if (successMessage) successMessage.style.display = 'none';
-        if (errorMessage) errorMessage.style.display = 'none';
+        if (errorMessage)   errorMessage.style.display   = 'none';
 
         fetch(scriptURL, { method: 'POST', body: new FormData(form), mode: 'no-cors' })
             .then(() => {
@@ -90,7 +54,7 @@ function handleFormSubmit(formId, successId, errorId) {
             })
             .finally(() => {
                 submitButton.textContent = originalText;
-                submitButton.disabled = false;
+                submitButton.disabled    = false;
             });
     });
 }
@@ -138,22 +102,44 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// ===== LOAD RETREATS FROM JSON =====
+async function loadRetreats() {
+    try {
+        // Cache-busting param ensures admin changes appear immediately
+        const res = await fetch('retreats.json?v=' + Date.now());
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        return await res.json();
+    } catch (e) {
+        console.warn('Could not load retreats.json, falling back to empty list.', e);
+        return [];
+    }
+}
+
 // ===== INITIALISE =====
-document.addEventListener('DOMContentLoaded', () => {
-    // Forms
+document.addEventListener('DOMContentLoaded', async () => {
+    // Set up all forms
     handleFormSubmit('stayUpdatedForm',  'stayUpdatedSuccess',  'stayUpdatedError');
     handleFormSubmit('facilityForm',     'facilitySuccess',     'facilityError');
     handleFormSubmit('contactPageForm',  'successMessage',      'errorMessage');
     handleFormSubmit('registrationForm', 'successMessage',      'errorMessage');
 
-    // Homepage retreat highlights (first 3)
+    // Load retreat data
+    const retreatsData = await loadRetreats();
+
+    // Build lookup map for the signup page
+    const retreatInfo = retreatsData.reduce((map, r) => {
+        map[r.id] = { name: r.name, sheetName: r.sheetName };
+        return map;
+    }, {});
+
+    // Homepage highlights (first 3)
     renderRetreatCards(retreatsData, 'highlightsGrid', 3);
 
     // Bookings page (all retreats)
     renderRetreatCards(retreatsData, 'retreatsGrid');
 
-    // Retreat signup page — populate hero + hidden fields from URL param
-    const urlParams = new URLSearchParams(window.location.search);
+    // ---- Retreat signup page ----
+    const urlParams  = new URLSearchParams(window.location.search);
     const retreatId  = urlParams.get('retreat');
     const titleEl    = document.getElementById('retreatTitle');
     const nameInput  = document.getElementById('retreatName');
@@ -161,14 +147,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (retreatId && retreatInfo[retreatId]) {
         const info = retreatInfo[retreatId];
-        // Hidden form fields
         if (nameInput)  nameInput.value  = info.name;
         if (sheetInput) sheetInput.value = info.sheetName;
+        if (titleEl)    titleEl.textContent = info.name;
 
-        // Form title (inside the form section)
-        if (titleEl) titleEl.textContent = info.name;
-
-        // Populate hero
         const retreat = retreatsData.find(r => r.id === retreatId);
         const hero    = document.getElementById('retreatHero');
         if (hero && retreat) {
