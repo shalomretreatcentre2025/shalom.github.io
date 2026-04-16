@@ -1,15 +1,5 @@
 [
   {
-    "id": "lifeinthespiritsemin3133",
-    "name": "Life in the Spirit Seminar",
-    "tag": "Evenings Weekly",
-    "date": "7:30pm every Thursday 16th April-21st May",
-    "description": "Join Fr. John Mockler, Fr. John Keane, Fr. John McCarthy, Bernadette Goulding, Fr. Pat Corkery, Canon Donal O' Mahony, and more for our Life in the Spirit Seminar series every Thursday 7:30pm from April 16th until May 21st",
-    "image": "https://i.postimg.cc/Qd5gLYgW/life-in-the-spirit.png",
-    "imageFocus": "top",
-    "sheetName": "Life in the Spirit Booking"
-  },
-  {
     "id": "stmarkscriptureretre0299",
     "name": "St. Mark Scripture Retreat",
     "tag": "Day Retreat",
@@ -38,5 +28,15 @@
     "image": "https://i.postimg.cc/W1jTSgK9/young-women-s-retreat.png",
     "imageFocus": "top",
     "sheetName": "Young Womens 10th May"
+  },
+  {
+    "id": "mensfilmnightwithbis6088",
+    "name": "Men's Film Night with Bishop Alphonsus Cullinan",
+    "tag": "Film Screening (Men 18-45)",
+    "date": "Sun. 10th May 6:30pm",
+    "description": "Join Bishop Alphonsus Cullinan of the Waterford and Lismore diocese for a film screening of 'Molokai', an adaption of the life of Saint Damian the leper priest of Molokai. Open to all men between 18-45",
+    "image": "https://i.postimg.cc/tC60Vkq9/molokai-bishop.png",
+    "imageFocus": "top",
+    "sheetName": "Molokai"
   }
 ]
