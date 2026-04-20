@@ -1,5 +1,25 @@
 [
   {
+    "id": "eddiestonestalklifei0504",
+    "name": "Eddie Stones talk - Life in the Spirit",
+    "tag": "Evening Talk",
+    "date": "7pm Tues. 21st April",
+    "description": "Eddie stones will be giving a talk at our link in event with the Life in the Spirit Seminar. The evening will include the rosary, Divine Mercy Chaplet, and praise and worship. No booking is required",
+    "image": "https://i.postimg.cc/HxwvGHXR/eddie-stones.png",
+    "imageFocus": "top",
+    "sheetName": "eddie stones"
+  },
+  {
+    "id": "lifeinthespiritsemin0958",
+    "name": "Life in the Spirit Seminar",
+    "tag": "Evening talk series",
+    "date": "7:30pm every Thursday",
+    "description": "Join speakers such as Fr. John Mockler, Fr, John Keane, Fr. John McCarthy, Bernadette Goulding, Fr. Pat Corkery, Canon Donal O' Mahony, and more for our Life in the Spirit Seminar including talks, praise and worship, and silence.",
+    "image": "https://i.postimg.cc/W318yrph/life-in-the-spirit.png",
+    "imageFocus": "top",
+    "sheetName": "life in the spirit"
+  },
+  {
     "id": "stmarkscriptureretre0299",
     "name": "St. Mark Scripture Retreat",
     "tag": "Day Retreat",
@@ -20,6 +40,16 @@
     "sheetName": "Queen of the May"
   },
   {
+    "id": "motherdaughterretrea5593",
+    "name": "Mother Daughter Retreat",
+    "tag": "Day Retreat",
+    "date": "12:30pm-4:30pm  Sat. 9th May",
+    "description": "Join the Sisters of Mercy of Alma for our Mother & Daughter retreat including Holy Mass, talks, prayer, and much more",
+    "image": "https://i.postimg.cc/jj0PNfJq/mother-daughter-retreat.png",
+    "imageFocus": "top",
+    "sheetName": "mother daughter retreat 9th"
+  },
+  {
     "id": "youngwomensretreat8397",
     "name": "Young Women's Retreat",
     "tag": "Day Retreat",
@@ -27,7 +57,7 @@
     "description": "Join the ASCJ Sisters from Waterford for our young women's retreat with talks, Holy Mass, silence, small groups, and much more.",
     "image": "https://i.postimg.cc/W1jTSgK9/young-women-s-retreat.png",
     "imageFocus": "top",
-    "sheetName": "Young Womens 10th May"
+    "sheetName": "Young Womens sunday"
   },
   {
     "id": "mensfilmnightwithbis6088",
