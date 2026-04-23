@@ -1,13 +1,13 @@
 [
   {
-    "id": "eddiestonestalklifei0504",
-    "name": "Eddie Stones talk - Life in the Spirit",
-    "tag": "Evening Talk",
-    "date": "7pm Tues. 21st April",
-    "description": "Eddie stones will be giving a talk at our link in event with the Life in the Spirit Seminar. The evening will include the rosary, Divine Mercy Chaplet, and praise and worship. No booking is required",
-    "image": "https://i.postimg.cc/HxwvGHXR/eddie-stones.png",
+    "id": "stmarkscriptureretre0299",
+    "name": "St. Mark Scripture Retreat",
+    "tag": "Day Retreat",
+    "date": "Sat. 25th April 11:30am-3:45pm",
+    "description": "Join Fr. Thomas Cacciola CFR for a deep dive into the gospel of St. Mark for the feast of St. Mark the Evangelist. Featuring Adoration, Lectio, Exegesis on the gospel of Mark",
+    "image": "https://i.postimg.cc/1zrVRDnv/st-mark-scripture-retreat.png",
     "imageFocus": "top",
-    "sheetName": "eddie stones"
+    "sheetName": "St Mark 25th April"
   },
   {
     "id": "lifeinthespiritsemin0958",
@@ -18,16 +18,6 @@
     "image": "https://i.postimg.cc/W318yrph/life-in-the-spirit.png",
     "imageFocus": "top",
     "sheetName": "life in the spirit"
-  },
-  {
-    "id": "stmarkscriptureretre0299",
-    "name": "St. Mark Scripture Retreat",
-    "tag": "Day Retreat",
-    "date": "Sat. 25th April 11:30am-3:45pm",
-    "description": "Join Fr. Thomas Cacciola CFR for a deep dive into the gospel of St. Mark for the feast of St. Mark the Evangelist. Featuring Adoration, Lectio, Exegesis on the gospel of Mark",
-    "image": "https://i.postimg.cc/1zrVRDnv/st-mark-scripture-retreat.png",
-    "imageFocus": "top",
-    "sheetName": "St Mark 25th April"
   },
   {
     "id": "queenofthemay5023",
