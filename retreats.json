@@ -1,15 +1,5 @@
 [
   {
-    "id": "queenofthemay2846",
-    "name": "Queen of The May",
-    "tag": "Mini Retreat",
-    "date": "Wed 20th May 11:30am-1:00pm",
-    "description": "Join Seán Blackwell, B.A. for a talk on Our Lady as Queen of the May and the theological significance of her title. The day includes a talk, tea & coffee, and adoration.",
-    "image": "https://i.postimg.cc/dt1RTq5T/Queen-of-the-May.png",
-    "imageFocus": "top",
-    "sheetName": "Queen of the May 20th"
-  },
-  {
     "id": "lifeinthespiritsemin0958",
     "name": "Life in the Spirit Seminar",
     "tag": "Evening talk series",
@@ -18,16 +8,6 @@
     "image": "https://i.postimg.cc/W318yrph/life-in-the-spirit.png",
     "imageFocus": "top",
     "sheetName": "life in the spirit"
-  },
-  {
-    "id": "adaywithjesussacredh3732",
-    "name": "A day with Jesus - Sacred Heart Retreat",
-    "tag": "Mini-Retreat",
-    "date": "Friday 5th June 11:00am-1:00pm",
-    "description": "Join Fr. John Mockler for a mini-retreat in preparation of the Feast of the Sacred Heart. With Eucharistic Adoration, confession, talks, and more, you will have a day with Jesus.",
-    "image": "https://i.postimg.cc/FKmQDndB/Sacred-Heart-Retreat.png",
-    "imageFocus": "top",
-    "sheetName": "Sacred Heart 5th June"
   },
   {
     "id": "amanforallseasons7981",
