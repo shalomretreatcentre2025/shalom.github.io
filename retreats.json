@@ -18,5 +18,17 @@
     "image": "https://i.postimg.cc/50pVTqdw/A-Man-for-all-Seasons.png",
     "imageFocus": "top",
     "sheetName": "Thomas More film"
+  },
+  {
+    "id": "corpuschristiprocess5388",
+    "name": "Corpus Christi Procession",
+    "tag": "Procession",
+    "date": "Friday 5th March 7pm",
+    "description": "First Friday Mass at Holy Cross Parish Church at 7pm followed by The Eucharistic Procession",
+    "image": "https://i.postimg.cc/RZbkZ45k/Whats-App-Image-2026-05-27-at-03-06-19.jpg",
+    "imageFocus": "center",
+    "sheetName": "Corpus Christi Procession",
+    "costEnabled": false,
+    "costText": ""
   }
 ]
