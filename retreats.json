@@ -10,18 +10,6 @@
     "sheetName": "life in the spirit"
   },
   {
-    "id": "amanforallseasons7981",
-    "name": "A Man for all Seasons",
-    "tag": "Film Screening",
-    "date": "Monday 22nd June Time TBD",
-    "description": "Join us for a film screening of  ‘A man for all seasons’ the film on the life of St. Thomas More. We will also pray the rosary and devotions to St. Thomas",
-    "image": "https://i.postimg.cc/50pVTqdw/A-Man-for-all-Seasons.png",
-    "imageFocus": "top",
-    "sheetName": "Thomas More film",
-    "costEnabled": false,
-    "costText": ""
-  },
-  {
     "id": "corpuschristiprocess5388",
     "name": "Corpus Christi Procession",
     "tag": "Procession",
@@ -54,6 +42,18 @@
     "image": "https://i.postimg.cc/yxj9z7pL/Whats-App-Image-2026-05-27-at-03-06-41.jpg",
     "imageFocus": "top",
     "sheetName": "",
+    "costEnabled": false,
+    "costText": ""
+  },
+  {
+    "id": "amanforallseasons7981",
+    "name": "A Man for all Seasons",
+    "tag": "Film Screening",
+    "date": "Monday 22nd June Time TBD",
+    "description": "Join us for a film screening of  ‘A man for all seasons’ the film on the life of St. Thomas More. We will also pray the rosary and devotions to St. Thomas",
+    "image": "https://i.postimg.cc/50pVTqdw/A-Man-for-all-Seasons.png",
+    "imageFocus": "top",
+    "sheetName": "Thomas More film",
     "costEnabled": false,
     "costText": ""
   }
