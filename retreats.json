@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "id": "innerhealingretreat5140",
+    "name": "Inner Healing Retreat",
+    "tag": "Retreat",
+    "date": "11th July 2026",
+    "description": "Holy Cross Church, Charleville",
+    "image": "https://i.postimg.cc/zBP6n4Ly/IMG-01-o7-26.jpg",
+    "imageFocus": "center",
+    "sheetName": "",
+    "costEnabled": false,
+    "costText": ""
+  }
+]
